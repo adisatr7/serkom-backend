@@ -1,0 +1,12 @@
+# Segala macam file yang tidak perlu diupload ke github
+
+# Environment variables
+env.*
+.env
+
+# Lock file
+package-lock.json
+yarn.lock
+
+# Dependency directories
+node_modules/
