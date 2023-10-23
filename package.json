@@ -1,17 +1,18 @@
 {
-  "name": "runtah-epr-backend",
+  "name": "serkom-eja",
   "version": "1.0.0",
   "main": "src/index.ts",
   "type": "module",
   "scripts": {
     "start": "tsx watch src/index.ts"
   },
-  "author": "adisatr7",
+  "author": "Bangrejas",
   "license": "MIT",
   "private": false,
   "dependencies": {
     "@types/express": "^4.17.20",
     "express": "^4.18.2",
+    "mariadb": "^3.2.2",
     "surrealdb.js": "^0.9.1",
     "tsx": "^3.14.0",
     "typescript": "^5.2.2"
