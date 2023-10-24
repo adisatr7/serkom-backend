@@ -10,3 +10,16 @@ yarn.lock
 
 # Dependency directories
 node_modules/
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Linux
+*.swp
+
+# Logs
+logs
+*.log
