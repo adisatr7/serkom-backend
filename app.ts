@@ -1,5 +1,6 @@
 import express from "express"
 import { Request, Response, NextFunction } from "express"
+import cors from "cors"
 import { PrismaClient, pendaftaran as Pendaftaran } from "./prisma/client/index.js"
 import * as dotenv from "dotenv"
 import { PrismaClientKnownRequestError } from "./prisma/client/runtime/library.js"
@@ -16,6 +17,9 @@ const app = express()
 
 // Middleware agar express secara otomatis mengubah body request menjadi JSON
 app.use(express.json())
+
+// Inisiasi middleware CORS
+app.use(cors())
 
 
 // Middleware untuk error handling secara asynchronous
