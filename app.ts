@@ -172,7 +172,17 @@ app.delete("/api/pendaftaran/:id", (req: Request, res: Response) => {
 })
 
 
+// Ambil konfigurasi port dan host dari file `.env`
+const port = parseInt(process.env.BACKEND_PORT ?? "") || 8080
+const host = process.env.BACKEND_HOST || "localhost"
+
 // Jalankan server (simpan ini di akhir file)
-app.listen(process.env.BACKEND_PORT, () => {
-  console.log(`Backend server is running on port ${process.env.BACKEND_PORT}!`)
+app.listen(port, host, 0, () => {
+  const url = `http://${host}:${port}`
+  console.log(`Backend server is now online!`)
+  console.log(``)
+  console.log(`Available endpoint(s):`)
+  console.log(`- ${url}/api/pendaftaran`)
+  console.log(``)
+  console.log(`Press CTRL+C to stop the server.`)
 })
